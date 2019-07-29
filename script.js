@@ -7,19 +7,37 @@
 
 $(document).ready(function(){
 
-// Scrivere codice qui
+// Salvo in una variabile l'indirizzo API
+var numRandom = "https://flynn.boolean.careers/exercises/api/random/int";
 
+$(".quad").click(function(){
 
+  // Memorizzo this in una variabile
+  var questo = this;
 
+  // Richiamo il numero radom dall'API
+  $.ajax(
+     {
+        url : numRandom,
+        method: "GET",
+        success: function(data){
+          // Memorizzo in una variabile il numero random
+          var numGenerato = data.response;
+          // Condizione
+          if (numGenerato < 5) {
+            // Aggiungo la classe .giallo e stampo il testo
+            $(questo).addClass("giallo").text(numGenerato);
+          } else {
+            // Aggiungo la classe .giallo e stampo il testo
+            $(questo).addClass("verde").text(numGenerato);
+          }
+        },
+        error: function(){
 
+        }
+     }
+  );
 
-
-
-
-
-
-
-
-
+});
 
 });

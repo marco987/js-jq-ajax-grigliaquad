@@ -28,3 +28,11 @@ body {
   height: 70px;
   border: solid 1px #000;
 }
+
+.verde {
+  background-color: green;
+}
+
+.giallo {
+  background-color: yellow;
+}
