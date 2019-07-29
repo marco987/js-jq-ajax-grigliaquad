@@ -2,4 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.griglia {
+  display: flex;
+  width: 420px;
+  flex-wrap: wrap;
+}
+
+.quad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border: solid 1px #000;
 }
